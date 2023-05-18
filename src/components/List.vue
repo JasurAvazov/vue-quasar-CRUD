@@ -13,9 +13,22 @@
 
 <script>
 import { defineComponent } from "vue";
+import { api } from "boot/axios";
 
 export default defineComponent({
   name: "ListComponent",
+  mounted() {
+    this.$nextTick(function () {
+      api
+        .get(this.$store.state.url)
+        .then((response) => {
+          this.$store.commit("updateArr", response.data);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    });
+  },
 });
 </script>
 

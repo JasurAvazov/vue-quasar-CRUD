@@ -8,6 +8,9 @@
         <q-btn class="btn" label="List" to="/list" />
       </li>
       <li class="nav__btns-btn">
+        <q-btn class="btn" label="Update" to="/update" />
+      </li>
+      <li class="nav__btns-btn">
         <q-btn class="btn back" label="Back" to="/" />
       </li>
     </ul>

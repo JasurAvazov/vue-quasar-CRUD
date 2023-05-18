@@ -1,5 +1,6 @@
 <template>
-  <div class="create">
+  <div class="update">
+    <q-input v-model.number="productData.id" label="Id" type="number" />
     <q-input
       v-model.number="productData.product_type_id"
       label="Product Type ID"
@@ -13,7 +14,7 @@
       label="Created Date"
       type="date"
     />
-    <q-btn class="submit" label="Создать" @click="submitForm" />
+    <q-btn class="submit" label="Обновить" @click="submitForm" />
   </div>
 </template>
 
@@ -23,10 +24,11 @@ import { api } from "boot/axios";
 import { useRouter } from "vue-router";
 
 export default defineComponent({
-  name: "CreateComponent",
+  name: "UpdateComponent",
   setup() {
     const router = useRouter();
     const productData = ref({
+      id: null,
       product_type_id: null,
       name_uz: "",
       cost: null,
@@ -36,7 +38,7 @@ export default defineComponent({
 
     const submitForm = () => {
       api
-        .post("/api/product", productData.value)
+        .put("/api/product", productData.value)
         .then((response) => {
           console.log(response.data);
           router.push("/list");
@@ -55,7 +57,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.create {
+.update {
   display: flex;
   align-content: center;
   flex-direction: column;

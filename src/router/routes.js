@@ -20,6 +20,14 @@ const routes = [
   },
 
   {
+    path: "/update",
+    component: () => import("layouts/MainLayout.vue"),
+    children: [
+      { path: "", component: () => import("src/pages/UpdatePage.vue") },
+    ],
+  },
+
+  {
     path: "/:catchAll(.*)*",
     component: () => import("pages/ErrorNotFound.vue"),
   },

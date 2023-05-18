@@ -5,7 +5,8 @@ export default store(function () {
   const Store = createStore({
     modules: {},
     state: {
-      arr: 0,
+      arr: null,
+      url: "/api/product",
     },
     mutations: {
       updateArr(state, payload) {
