@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+p {
+  margin: 0;
+}
+.q-page-container {
+  margin: auto;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 20px;
+  @media (max-width: 1400px) {
+    max-width: 1200px;
+  }
+}
+.q-btn {
+  padding: 10px 20px;
+}

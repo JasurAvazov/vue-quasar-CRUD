@@ -1,15 +1,19 @@
-import { createStore } from 'vuex'
+import { store } from "quasar/wrappers";
+import { createStore } from "vuex";
 
-export default createStore({
-  state: {
-    count: 0
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+export default store(function () {
+  const Store = createStore({
+    modules: {},
+    state: {
+      arr: 0,
+    },
+    mutations: {
+      updateArr(state, payload) {
+        state.arr = payload;
+      },
+    },
+    strict: process.env.DEBUGGING,
+  });
+
+  return Store;
+});
