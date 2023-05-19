@@ -42,7 +42,8 @@ export default defineComponent({
       width: 100%;
       .q-btn {
         width: 100%;
-        color: white;
+        background-color: #fff;
+        color: black;
       }
       .back {
         margin-top: 40px;

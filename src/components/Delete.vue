@@ -13,7 +13,7 @@ import { useRouter } from "vue-router";
 export default defineComponent({
   name: "DeleteComponent",
   setup() {
-    const product_type_id = ref(2);
+    const product_type_id = ref();
     const router = useRouter();
 
     const submitForm = () => {
