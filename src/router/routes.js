@@ -28,6 +28,14 @@ const routes = [
   },
 
   {
+    path: "/delete",
+    component: () => import("layouts/MainLayout.vue"),
+    children: [
+      { path: "", component: () => import("src/pages/DeletePage.vue") },
+    ],
+  },
+
+  {
     path: "/:catchAll(.*)*",
     component: () => import("pages/ErrorNotFound.vue"),
   },

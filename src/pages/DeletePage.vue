@@ -4,20 +4,20 @@
       <NavBar />
     </div>
     <div class="main">
-      <Create />
+      <Delete />
     </div>
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from "vue";
-import Create from "../components/Create.vue";
+import Delete from "../components/Delete.vue";
 import NavBar from "../components/NavBar.vue";
 
 export default defineComponent({
-  name: "CreatePage",
+  name: "DeletePage",
   components: {
-    Create,
+    Delete,
     NavBar,
   },
 });

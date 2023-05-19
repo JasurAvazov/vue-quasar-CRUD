@@ -11,6 +11,9 @@
         <q-btn class="btn" label="Update" to="/update" />
       </li>
       <li class="nav__btns-btn">
+        <q-btn class="btn" label="Delete" to="/delete" />
+      </li>
+      <li class="nav__btns-btn">
         <q-btn class="btn back" label="Back" to="/" />
       </li>
     </ul>

@@ -15,7 +15,7 @@ import List from "../components/List.vue";
 import NavBar from "../components/NavBar.vue";
 
 export default defineComponent({
-  name: "IndexPage",
+  name: "ListPage",
   components: {
     List,
     NavBar,
